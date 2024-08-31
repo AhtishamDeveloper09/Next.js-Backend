@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.add-user {
+  margin-top: 100px;
+  text-align: -webkit-center;
+}
+
+.input-feild {
+  display: block;
+  margin: 0.6rem;
+  height: 2rem;
+  width: 20rem;
+  padding: 0.6rem;
+}
+
+.btn {
+  background-color: skyblue;
+  color: white;
+  margin: 0.6rem;
+  width: 20rem;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.user-item span {
+  display: inline-block;
+  width: 100px;
+}
