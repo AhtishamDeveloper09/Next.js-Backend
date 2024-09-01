@@ -19,3 +19,11 @@ export async function GET(request, content) {
   let result = await Product.findById(filter);
   return NextResponse.json({ result, success: true });
 }
+
+export async function DELETE(request, content) {
+  const productid = content.params.productid;
+  const filter = { _id: productid };
+  await mongoose.connect(connectionStr);
+  let result = await Product.deleteOne(filter);
+  return NextResponse.json({ result, success: true });
+}
