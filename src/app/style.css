@@ -4,7 +4,12 @@
   box-sizing: border-box;
 }
 
-.add-user {
+.main-page {
+  margin-top: 50px;
+  text-align: -webkit-center;
+}
+
+.add-product {
   margin-top: 100px;
   text-align: -webkit-center;
 }
@@ -26,9 +31,4 @@
   padding: 0.6rem;
   border-radius: 0.5rem;
   cursor: pointer;
-}
-
-.user-item span {
-  display: inline-block;
-  width: 100px;
 }
