@@ -1,7 +1,10 @@
 import Link from "next/link";
+import DeleteProduct from "../component/DeleteProduct";
 
 const getProducts = async () => {
-  let response = await fetch("http://localhost:3000/api/products");
+  let response = await fetch("http://localhost:3000/api/products", {
+    cache: "no-store",
+  });
   let data = await response.json();
   if (data.success) {
     return data.result;
@@ -36,6 +39,9 @@ async function ProductsList() {
               <td>{item.category}</td>
               <td>
                 <Link href={`/productslist/${item._id}`}>Edit</Link>
+              </td>
+              <td>
+                <DeleteProduct id={item._id} />
               </td>
             </tr>
           ))}

@@ -17,6 +17,11 @@ function AddProduct() {
     let data = await response.json();
     if (data.success) {
       alert("Product Added Successfully");
+      // setName("");
+      // setColor("");
+      // setPrice("");
+      // setCompany("");
+      // setCategory("");
     } else {
       alert("Oops! Please try again.");
     }
