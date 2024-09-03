@@ -11,6 +11,9 @@ export default function Home() {
       <br />
       <br />
       <Link href="/addproduct">Add Product</Link>
+      <br />
+      <br />
+      <Link href="/uploadimage">Upload Image</Link>
     </div>
   );
 }
