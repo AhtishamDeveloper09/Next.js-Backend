@@ -1,6 +1,7 @@
 "use client";
 import "@/app/style.css";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 function AddProduct() {
   const [name, setName] = useState("");
@@ -8,6 +9,8 @@ function AddProduct() {
   const [price, setPrice] = useState("");
   const [company, setCompany] = useState("");
   const [category, setCategory] = useState("");
+
+  const router = useRouter();
 
   const addProduct = async () => {
     let response = await fetch("http://localhost:3000/api/products", {
@@ -17,6 +20,7 @@ function AddProduct() {
     let data = await response.json();
     if (data.success) {
       alert("Product Added Successfully");
+      router.push("/productslist");
       // setName("");
       // setColor("");
       // setPrice("");
